@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="feedbackstyle.css">
+</head>
+<body>
+    <!-- hyperlink bar -->
+    <ul class="navbar">
+        <li class="nav-item"><a href=index.html>Home</a></li>
+        <li class="nav-item"><a href=about.html>About us</a></li>
+        <li class="nav-item"><a href=service.html>About the service</a></li>
+        <li class="nav-item"><a href=promotion.html>Promotion</a></li>
+        <li class="nav-item"><a href=support.html>Support</a></li>
+        <li class="nav-item"><a href=feedback.html>Feedback</a></li>
+    </ul>
+    <!-- H1 title -->
+    <h1>Feedback</h1>
+    <!-- H2 title -->
+    <h2>Please rate us and help us to improve.</h2>
+    <!-- reply form -->
+    <form id="feedbackform" action="feedback-form.php" method="get">
+        <input type="hidden" name="form_sent" value="1"/>
+            <fieldset>
+                <legend>Please rate us:</legend>
+                <!-- Stars -->
+                <div>
+                    <input type="radio" name="rate" id="1star" value="1star" />
+                    <label for="1star">1 Star</label>
+                    <input type="radio" name="rate" id="2star" value="2star" />
+                    <label for="2star">2 Stars</label>
+                    <input type="radio" name="rate" id="3star" value="3star" />
+                    <label for="3star">3 Stars</label>
+                    <input type="radio" name="rate" id="4star" value="4star" />
+                    <label for="4star">4 Stars</label>
+                    <input type="radio" name="rate" id="5star" value="5star" />
+                    <label for="5star">5 Stars</label>
+                </div>
+                <!-- Message -->
+                <div>
+                    <label for="reason">Reason:</label><br>
+                    <textarea id="reason" name="reason" rows="5" cols="50" required placeholder="Please tell us the reason(s)"></textarea><br>
+                </div>
+                <!-- File upload -->
+                <div>
+                    <label for="upload">Supporting document(s) to be uploaded:</label><br>
+                    <input type="file" id="file" name="file"><br>
+                </div>
+            </fieldset>
+            <!-- Reset button -->
+            <button type="reset">Reset</button>
+            <!-- Submit button -->
+            <button type="submit">Submit</button>
+        </form>
+</body>
+<!-- footer -->
+<footer>
+    Copyright. All rights reserved.
+</footer>
+</html>

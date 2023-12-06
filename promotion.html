@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="promotionstyle.css">
+</head>
+<body>
+    <!-- hyperlink bar -->
+    <ul class="navbar">
+        <li class="nav-item"><a href=index.html>Home</a></li>
+        <li class="nav-item"><a href=about.html>About us</a></li>
+        <li class="nav-item"><a href=service.html>About the service</a></li>
+        <li class="nav-item"><a href=promotion.html>Promotion</a></li>
+        <li class="nav-item"><a href=support.html>Support</a></li>
+        <li class="nav-item"><a href=feedback.html>Feedback</a></li>
+    </ul>
+    <!-- H1 title -->
+    <h1>Promotion</h1>
+    <!-- promotion photo -->
+    <img src="promotion.png" alt="promotion" class="promotionphoto">
+    <!-- H2 title -->
+    <h2>We are having 20% off promotion if you <strong>enroll as our new member</strong>!</h2>
+    <!-- paragraph -->
+    <p>Just type your phone number down here and check whether you are qualified to enroll as our new member!</p>
+    <!-- start a div for user to input phone number -->
+    <div>
+        <label for="phonenumber">Enter Your Phone Number:</label>
+        <input type="tel" id="phonenumber">
+    </div>
+    <!-- define the class for the button -->
+    <div class="button">
+    <button onclick="checkNumber()">Check Phone Number</button>
+    </div>
+    <!-- define the id for the result -->
+    <div id = "result"></div>
+    <!-- javascript for checking whether the user has input the phone number or not -->
+    <script>
+        function checkNumber(){
+            let userInput = document.getElementById("phonenumber").value;
+            // if the user has input numbers
+            if(!isNaN(userInput)){
+                // if the input is greater than 0, which all phone number across the world is greater than 0
+                if(userInput>0){
+                    // show the text
+                    document.getElementById("result").innerText = "This phone number is qualified to enroll!";
+                }
+                // if the input is not greater than 0
+                else{
+                    // show the text
+                    document.getElementById("result").innerText = "Sorry, this phone number is not qualified to enroll.";
+                }
+            }
+            // if the user has not input numbers
+            else{
+                // show the text
+                document.getElementById("result").innerText = "This is not a phone number. Please type again.";
+            }
+        }
+    </script>
+</body>
+<!-- footer -->
+<footer>
+    Copyright. All rights reserved.
+</footer>
+</html>

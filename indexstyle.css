@@ -1,0 +1,47 @@
+/* hyperlink bar css */
+ul.navbar{
+    list-style-type: none;
+    background-color: #333;
+    margin: 0px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+li.nav-item{
+    float:left;
+}
+
+li.nav-item a{
+    color:white;
+    padding: 0px 20px;
+    text-decoration: none;
+}
+
+/* h1 css */
+h1{
+    text-align: center;
+}
+
+/* indexphoto css */
+.indexphoto{
+    display: block;
+    width: 30%;
+    height: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* h2 css */
+h2{
+    text-align: center;
+}
+
+/* h3 css */
+h3{
+    text-align: center;
+}
+
+/* footer css */
+footer{
+    text-align: center;
+}

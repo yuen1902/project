@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="supportstyle.css">
+</head>
+<body>
+    <!-- hyperlink bar -->
+    <ul class="navbar">
+        <li class="nav-item"><a href=index.html>Home</a></li>
+        <li class="nav-item"><a href=about.html>About us</a></li>
+        <li class="nav-item"><a href=service.html>About the service</a></li>
+        <li class="nav-item"><a href=promotion.html>Promotion</a></li>
+        <li class="nav-item"><a href=support.html>Support</a></li>
+        <li class="nav-item"><a href=feedback.html>Feedback</a></li>
+    </ul>
+    <!-- H1 title -->
+    <h1>Support</h1>
+    <!-- paragraph -->
+    <p>Please let us know if you have any problems or enquiries by filling the form below. We will reply as soon as possible.</p>
+    <!-- reply form -->
+    <form id="supportform" action="support-form.php" method="get">
+        <input type="hidden" name="form_sent" value="1"/>
+        <fieldset>
+            <!-- Contact information part -->
+            <legend>Contact Information</legend>
+            <!-- First Name -->
+            <div>
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" name="fname" required placeholder="First Name"><br>
+            </div>
+            <!--Last Name-->
+            <div>
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname" name="lname" required placeholder="Last Name"><br>
+            </div>
+            <!-- Address -->
+            <div>
+                <label for="address">Address:</label>
+                <input id="address" type="text" name="address" required placeholder="Address"/>
+            </div>
+            <!-- Continent -->
+            <div>
+                <label for="continent">Continent:</label>
+                <select id="continent" name="continent">
+                    <option value="choose">Choose</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Europe">Europe</option>
+                    <option value="Afrcia">Afrcia</option>
+                    <option value="North America">North America</option>
+                    <option value="South America">South America</option>
+                    <option value="Oceania">Oceania</option>
+                </select>
+            </div>
+            <!-- Phone Number -->
+            <div>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]" required placeholder="Phone Number"><br>
+            </div>
+        </fieldset>
+        <fieldset>
+            <!-- Message part -->
+            <legend>Please describe about what had happened:</legend>
+            <!-- Message -->
+            <div>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="5" cols="50" required placeholder="Please describe about what had happened"></textarea><br>
+            </div>
+            <!-- File upload -->
+            <div>
+                <label for="upload">Supporting document(s) to be uploaded:</label><br>
+                <input type="file" id="file" name="file"><br>
+            </div>
+            </fieldset>
+            <!-- Contact Method -->
+            <legend>Contact Method(s):</legend>
+                <input type="checkbox" name="contact[]" id="contact1" value="pigeon mail" />
+                <label for="contact1">Pigeon Mail</label>
+                <input type="checkbox" name="contact[]" id="contact2" value="phone" />
+                <label for="contact2">Phone (Calling)</label>
+                <input type="checkbox" name="contact[]" id="contact3" value="sms" />
+                <label for="contact3">Phone (Text Message (SMS))</label><br>
+        </fieldset>
+        <!-- Reset button -->
+        <button type="reset">Reset</button>
+        <!-- Submit button -->
+        <button type="submit">Submit</button>
+    </form>
+</body>
+<!-- footer -->
+<footer>
+    Copyright. All rights reserved.
+</footer>
+</html>
